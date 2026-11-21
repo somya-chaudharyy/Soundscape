@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1f4068, #162447, #1b1b2f);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #e4e3e3;
+}
+
+header p {
+    color: #a4b3c6;
+    font-size: 1rem;
+}
+
+.sound-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.sound-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.sound-card.active {
+    background: rgba(79, 172, 254, 0.15);
+    border-color: #4facfe;
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.3);
+}
+
+.sound-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.sound-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.toggle-btn {
+    background: #ffffff;
+    color: #1b1b2f;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.2s;
+}
+
+.toggle-btn:hover {
+    background: #4facfe;
+    color: #fff;
+}
+
+.sound-card.active .toggle-btn {
+    background: #4facfe;
+    color: #fff;
+}
+
+.volume-slider {
+    width: 100%;
+    accent-color: #4facfe;
+    cursor: pointer;
+}
+
+.master-controls {
+    margin-top: 20px;
+}
+
+#stop-all-btn {
+    background: transparent;
+    border: 1px solid #ff6b6b;
+    color: #ff6b6b;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#stop-all-btn:hover {
+    background: #ff6b6b;
+    color: #fff;
+}
+/* Pomodoro Timer Styles */
+.pomodoro-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-display {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #4facfe;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.timer-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.timer-btn:hover {
+    background: #4facfe;
+    border-color: #4facfe;
+}
+
+.timer-modes {
+    display: flex;
+    gap: 10px;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    color: #a4b3c6;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 10px;
+    transition: color 0.2s;
+}
+
+.mode-btn.active {
+    color: #fff;
+    background: rgba(79, 172, 254, 0.2);
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundscape Mixer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🎧 Soundscape</h1>
+            <p>Mix your ideal ambient soundscape for studying, relaxing, or coding.</p>
+        </header>
+        
+    <div class="pomodoro-container">
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="timer-controls">
+            <button id="start-timer" class="timer-btn">Start</button>
+            <button id="pause-timer" class="timer-btn">Pause</button>
+            <button id="reset-timer" class="timer-btn">Reset</button>
+        </div>
+        <div class="timer-modes">
+            <button class="mode-btn active" data-time="25">Work (25m)</button>
+            <button class="mode-btn" data-time="5">Break (5m)</button>
+        </div>
+    </div>
+
+        <main class="sound-grid">
+            
+            <div class="sound-card" data-sound="rain">
+                <div class="icon">🌧️</div>
+                <h3>Rainfall</h3>
+                <button class="toggle-btn">Play</button>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                <audio loop src="dragon-studio-gentle-rain-07-437321.mp3"></audio>
+            </div>
+
+            
+            <div class="sound-card" data-sound="cafe">
+                <div class="icon">☕</div>
+                <h3>Coffee Shop</h3>
+                <button class="toggle-btn">Play</button>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                <audio loop src="freesound_community-busy-coffee-shop-live-acoustic-guitar-music-61678.mp3"></audio>
+            </div>
+
+            
+            <div class="sound-card" data-sound="fire">
+                <div class="icon">🔥</div>
+                <h3>Fireplace</h3>
+                <button class="toggle-btn">Play</button>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                <audio loop src="king_of_the_christmas-fireplace-loop-original-noise-178209.mp3"></audio>
+            </div>
+
+            
+            <div class="sound-card" data-sound="forest">
+                <div class="icon">🌲</div>
+                <h3>Forest Birds</h3>
+                <button class="toggle-btn">Play</button>
+                <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                <audio loop src="forestbirds.mp3"></audio>
+            </div>
+        </main>
+
+        <div class="master-controls">
+            <button id="stop-all-btn">Stop All Sounds</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
