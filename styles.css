@@ -14,7 +14,25 @@ body {
     align-items: center;
     padding: 20px;
 }
+body {
+    background: linear-gradient(-45deg, #1f4068, #162447, #1b1b2f, #2b2d5e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
 
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.sound-card.active {
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(79, 172, 254, 0.2); }
+    50%      { box-shadow: 0 0 25px rgba(79, 172, 254, 0.5); }
+}
 .container {
     width: 100%;
     max-width: 800px;
@@ -181,4 +199,7 @@ header p {
 .mode-btn.active {
     color: #fff;
     background: rgba(79, 172, 254, 0.2);
+}
+.sound-card:hover {
+    transform: translateY(-4px);
 }
