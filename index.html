@@ -27,6 +27,12 @@
             <button class="mode-btn active" data-time="25">Work (25m)</button>
             <button class="mode-btn" data-time="5">Break (5m)</button>
         </div>
+        <div class="custom-timer">
+    <input type="number" id="custom-minutes" min="1" max="180"
+           placeholder="Custom (min)" aria-label="Custom timer minutes">
+    <button id="set-custom" class="timer-btn">Set</button>
+</div>
+<p id="custom-error" class="custom-error"></p>
     </div>
 
         <main class="sound-grid">

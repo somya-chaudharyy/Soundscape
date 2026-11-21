@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 }
 
 body {
@@ -202,4 +202,35 @@ header p {
 }
 .sound-card:hover {
     transform: translateY(-4px);
+}
+.custom-timer {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.custom-timer input {
+    width: 140px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-align: center;
+    outline: none;
+}
+
+.custom-timer input:focus {
+    border-color: #4facfe;
+}
+
+.custom-timer input::placeholder {
+    color: #a4b3c6;
+}
+
+.custom-error {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    min-height: 1.2em;
+    margin-top: 8px;
 }
